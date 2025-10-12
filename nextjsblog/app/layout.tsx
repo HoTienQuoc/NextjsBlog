@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
-import NavBar from "@/components/layout/Navbar";
+import Navbar from "@/components/layout/Navbar";
 
 const poppins = Poppins({
   variable: "--font-geist-sans",
@@ -26,7 +26,7 @@ export default function RootLayout({
       <body
         className={cn('antialiased flex flex-col min-h-screen px-2', poppins.variable)}
       >
-        <NavBar/>
+        <Navbar/>
         <main className="flex-grow">
           {children}
         </main>
