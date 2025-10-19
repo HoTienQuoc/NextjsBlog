@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/layout/Navbar";
+import { ThemeProvider } from "next-themes";
 
 const poppins = Poppins({
   variable: "--font-geist-sans",
@@ -22,15 +23,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={cn('antialiased flex flex-col min-h-screen px-2', poppins.variable)}
       >
-        <Navbar/>
-        <main className="flex-grow">
-          {children}
-        </main>
-        <footer>Footer</footer>
+        <ThemeProvider attribute='class' defaultTheme="system" enableSystem disableTransitionOnChange>
+          <Navbar/>
+          <main className="flex-grow">
+            {children}
+          </main>
+          <footer>Footer</footer>
+        </ThemeProvider>
       </body>
     </html>
   );
