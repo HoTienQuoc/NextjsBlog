@@ -1,5 +1,7 @@
 import Container from "./Container";
 import ThemeToggle from "./ThemeToggle";
+import { MdNoteAlt } from "react-icons/md";
+
 
 const Navbar = () => {
     return (
@@ -7,8 +9,8 @@ const Navbar = () => {
             <Container>
                 <div className="flex justify-between items-center gap-8">
                     <div className="flex items-center gap-1 cursor-pointer">
-                        <div>Icon</div>
-                        <div>WEBDEV.BLOG</div>
+                        <MdNoteAlt size={24}/>
+                        <div className="font-bold text-xl">WEBDEV.BLOG</div>
                     </div>
                     <div>Search</div>
                     <div className="flex gap-5 sm:gap-8 items-center">
