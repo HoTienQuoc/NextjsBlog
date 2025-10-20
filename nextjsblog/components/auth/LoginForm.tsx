@@ -6,6 +6,8 @@ import {SubmitHandler, useForm} from 'react-hook-form'
 import FormField from '../common/FormField';
 import Button from '../common/Button';
 import Heading from '../common/Heading';
+import SocialAuth from './SocialAuth';
+
 
 const LoginForm = () => {
     const {register, handleSubmit, formState:{errors}} = useForm<LoginSchemaType>({
@@ -20,7 +22,10 @@ const LoginForm = () => {
             <FormField id="email" register={register} errors={errors} placeholder='email' type='email'/>
             <FormField id="password" register={register} errors={errors} placeholder='password' type='password'/>
             <Button type='submit' label='Login'/>
-
+            <div className="flex justify-center my-2">
+                Or
+            </div>
+            <SocialAuth/>
         </form>
     );
 }
