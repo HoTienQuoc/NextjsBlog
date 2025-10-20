@@ -4,6 +4,8 @@ import SearchInput from "./SearchInput";
 import ThemeToggle from "./ThemeToggle";
 import { MdNoteAlt } from "react-icons/md";
 import UserButton from "./UserButton";
+import Link from "next/link";
+
 
 
 
@@ -21,6 +23,11 @@ const Navbar = () => {
                         <ThemeToggle/>
                         <Notifications/>
                         <UserButton/>
+                        <>
+                            <Link href='/login'>Login</Link>
+                            <Link href='/register'>Register</Link>
+                            {/* <RegisterButton/> */}
+                        </>
                     </div>
                 </div>
             </Container>
